@@ -14,15 +14,25 @@ import {useNavigation} from '@react-navigation/native';
 import {ISinglePokemon} from '../types/pokeTypes';
 import {getOficialImg, windowWidth} from '../util/magicalString';
 import {RootStackMainParams} from '../navigation/navigationMain';
+import {useAppDispatch} from '../redux/store';
+import {
+  getSinglePokemonAsync,
+  resetState,
+  setPokeID,
+} from '../redux/slices/singlePokemon';
 
 type NavigationProp = StackScreenProps<RootStackMainParams, 'Details'>;
 
 export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
   const navigation = useNavigation<NavigationProp['navigation']>();
   const isDarkMode = useColorScheme() === 'dark';
+  const dispatch = useAppDispatch();
 
   const navigateDetails = (pokeID: string) => {
-    navigation.navigate('Details', {pokeID});
+    dispatch(resetState());
+    dispatch(setPokeID(pokeID));
+    dispatch(getSinglePokemonAsync(pokeID));
+    navigation.navigate('Details');
   };
 
   return (

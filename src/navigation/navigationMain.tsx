@@ -8,9 +8,7 @@ const Stack = createStackNavigator<RootStackMainParams>();
 
 export type RootStackMainParams = {
   Home: undefined;
-  Details: {
-    pokeID: string;
-  };
+  Details: undefined;
 };
 
 export const NavigationMain = () => {

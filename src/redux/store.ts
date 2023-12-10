@@ -13,6 +13,7 @@ const persisConfig = {
   key: 'root',
   storage: AsyncStorage,
   whitelist: ['pokeReducer'],
+  blacklist: ['singlePokeReducer'],
 };
 
 const persistedReducer = persistReducer(persisConfig, rootReducer);

@@ -9,7 +9,6 @@ import 'react-native-gesture-handler';
 import {NavigationMain} from './src/navigation/navigationMain';
 import {persistor, store} from './src/redux/store';
 import {
-  getTokenForCloudMessage,
   notificationCloudMessageListener,
   requestUserPermission,
 } from './src/util/firebaseSupport';
@@ -26,7 +25,7 @@ function App(): JSX.Element {
   useEffect(() => {
     requestUserPermission();
     notificationCloudMessageListener();
-    getTokenForCloudMessage();
+    // getTokenForCloudMessage();
   }, []);
 
   return (

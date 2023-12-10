@@ -29,7 +29,7 @@ export const Home = () => {
       dispatch(getPokemonsAsync(page + 1));
     }
   };
-  console.log({totalPokemon}, pokeList.length);
+  // console.log({totalPokemon}, pokeList.length);
   return (
     <StandarWrapper>
       <View style={styles.container}>
