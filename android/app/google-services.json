@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "554181443118",
+    "project_id": "pokedex-notificationpush-rn",
+    "storage_bucket": "pokedex-notificationpush-rn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554181443118:android:ce9e5b9f6147e7b60269bf",
+        "android_client_info": {
+          "package_name": "com.pokedex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKQJKAKDV72KPyrp9gs5uRPF35oiCZEmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
