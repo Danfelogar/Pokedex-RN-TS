@@ -10,6 +10,7 @@ import {useSelector} from 'react-redux';
 import {RootState, useAppDispatch} from '../redux/store';
 import {getPokemonsAsync} from '../redux/slices/pokemons';
 import {PokemonCard} from '../components/pokemonCard';
+import {StandarWrapper} from '../components/standarWrapper';
 
 export const Home = () => {
   const flatListID = useId();
@@ -30,38 +31,40 @@ export const Home = () => {
   };
   console.log({totalPokemon}, pokeList.length);
   return (
-    <View style={styles.container}>
-      <Text style={styles.textTitle}>PokeDex</Text>
-      <Text style={{fontSize: 15, marginBottom: 22}}>
-        There are more than {totalPokemon} pokemons in the world, counter page:{' '}
-        {page}
-      </Text>
-      <FlatList
-        columnWrapperStyle={{justifyContent: 'space-between'}}
-        style={{width: '100%'}}
-        key={flatListID}
-        data={pokeList}
-        renderItem={({item}) => <PokemonCard item={item} />}
-        keyExtractor={item => item.id}
-        numColumns={2}
-        onEndReached={() => {
-          if (totalPokemon > pokeList.length) {
-            getMorePokemons();
+    <StandarWrapper>
+      <View style={styles.container}>
+        <Text style={styles.textTitle}>PokeDex</Text>
+        <Text style={{fontSize: 15, marginBottom: 22}}>
+          There are more than {totalPokemon} pokemons in the world, counter
+          page: {page}
+        </Text>
+        <FlatList
+          columnWrapperStyle={{justifyContent: 'space-around'}}
+          style={{width: '100%', margin: 10}}
+          key={flatListID}
+          data={pokeList}
+          renderItem={({item}) => <PokemonCard item={item} />}
+          keyExtractor={item => item.id}
+          numColumns={2}
+          onEndReached={() => {
+            if (totalPokemon > pokeList.length) {
+              getMorePokemons();
+            }
+          }}
+          showsVerticalScrollIndicator={false}
+          ListFooterComponent={
+            <View
+              style={{
+                width: '100%',
+                display: totalPokemon > pokeList.length ? 'flex' : 'none',
+                justifyContent: 'center',
+              }}>
+              <ActivityIndicator />
+            </View>
           }
-        }}
-        showsVerticalScrollIndicator={false}
-        ListFooterComponent={
-          <View
-            style={{
-              width: '100%',
-              display: totalPokemon > pokeList.length ? 'flex' : 'none',
-              justifyContent: 'center',
-            }}>
-            <ActivityIndicator />
-          </View>
-        }
-      />
-    </View>
+        />
+      </View>
+    </StandarWrapper>
   );
 };
 

@@ -3,10 +3,10 @@ import {Alert} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {NavigationContainer} from '@react-navigation/native';
+import 'react-native-gesture-handler';
 
-import {Home} from './src/screen/home';
+import {NavigationMain} from './src/navigation/navigationMain';
 import {persistor, store} from './src/redux/store';
 import {
   getTokenForCloudMessage,
@@ -15,8 +15,6 @@ import {
 } from './src/util/firebaseSupport';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
   useEffect(() => {
     const unsubscribe = messaging().onMessage(async remoteMessage => {
       Alert.alert('A new FCM message arrived!', JSON.stringify(remoteMessage));
@@ -31,18 +29,12 @@ function App(): JSX.Element {
     getTokenForCloudMessage();
   }, []);
 
-  const backgroundStyle = {
-    flex: 1,
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    marginTop: StatusBar.currentHeight || 0,
-  };
-
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <SafeAreaView style={backgroundStyle}>
-          <Home />
-        </SafeAreaView>
+        <NavigationContainer>
+          <NavigationMain />
+        </NavigationContainer>
       </PersistGate>
     </Provider>
   );

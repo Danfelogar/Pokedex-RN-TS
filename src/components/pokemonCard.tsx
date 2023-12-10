@@ -1,13 +1,34 @@
 import React from 'react';
-import {View, Text, Image, useColorScheme, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  useColorScheme,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {StackScreenProps} from '@react-navigation/stack';
+import {useNavigation} from '@react-navigation/native';
+
 import {ISinglePokemon} from '../types/pokeTypes';
 import {getOficialImg, windowWidth} from '../util/magicalString';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {RootStackMainParams} from '../navigation/navigationMain';
+
+type NavigationProp = StackScreenProps<RootStackMainParams, 'Details'>;
 
 export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
+  const navigation = useNavigation<NavigationProp['navigation']>();
   const isDarkMode = useColorScheme() === 'dark';
+
+  const navigateDetails = (pokeID: string) => {
+    navigation.navigate('Details', {pokeID});
+  };
+
   return (
-    <View
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => navigateDetails(item.id)}
       key={item.id}
       style={[
         styles.container,
@@ -19,7 +40,7 @@ export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
       ]}>
       <Image source={{uri: getOficialImg(item.id)}} style={styles.wrapperImg} />
       <Text style={styles.titlePoke}>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -30,7 +51,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 3,
     borderRadius: 10,
-    width: windowWidth * 0.44,
+    width: windowWidth * 0.4,
     marginBottom: 12,
     padding: 7,
     shadowColor: '#000',
