@@ -39,6 +39,7 @@ export const Home = () => {
           page: {page}
         </Text>
         <FlatList
+          testID="pokemon-list"
           columnWrapperStyle={{justifyContent: 'space-around'}}
           style={{width: '100%', margin: 10}}
           key={flatListID}
@@ -59,7 +60,7 @@ export const Home = () => {
                 display: totalPokemon > pokeList.length ? 'flex' : 'none',
                 justifyContent: 'center',
               }}>
-              <ActivityIndicator />
+              <ActivityIndicator testID="loading-indicator-2" />
             </View>
           }
         />

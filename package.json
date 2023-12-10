@@ -59,5 +59,28 @@
   },
   "engines": {
     "node": ">=16"
+  },
+  "jest": {
+    "preset": "react-native",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js",
+      "./jestSetupFile.js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "./test"
+    ],
+    "modulePathIgnorePatterns": [
+      "mocks",
+      "e2e/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
