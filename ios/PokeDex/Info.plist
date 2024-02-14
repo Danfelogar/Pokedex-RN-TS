@@ -35,6 +35,28 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>TSKConfiguration</key>
+	<dict>
+	<key>TSKPinnedDomains</key>
+	<dict>
+		<key>pokeapi.co</key>
+		<dict>
+		<key>TSKEnforcePinning</key>
+		<true/>
+		<key>TSKIncludeSubdomains</key>
+		<true/>
+		<key>TSKPublicKeyAlgorithms</key>
+		<array>
+			<string>TSKAlgorithmRsa2048</string>
+		</array>
+		<key>TSKPublicKeyHashes</key>
+		<array>
+			<string>eVr/eyROosdTqxrORu3/RD5wbJcsquAF6L2Qj4Q2cRw=</string>
+			<string>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=</string>
+		</array>
+		</dict>
+	</dict>
+	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>

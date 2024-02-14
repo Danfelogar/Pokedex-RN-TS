@@ -28,6 +28,8 @@ end
 target 'PokeDex' do
   config = use_native_modules!
 
+  # add ssl pinning with TrustKit
+  pod 'TrustKit'
   pod 'Firebase', :modular_headers => true
   pod 'FirebaseCoreInternal', :modular_headers => true
   pod 'GoogleUtilities', :modular_headers => true

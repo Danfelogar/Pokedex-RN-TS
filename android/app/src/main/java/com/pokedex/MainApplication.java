@@ -1,4 +1,4 @@
-package com.pokedex;
+package com.pokedexdevdanfelogar;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
@@ -9,6 +9,8 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
 import java.util.List;
+//ssl - pinning
+import com.facebook.react.modules.network.OkHttpClientProvider;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -58,5 +60,6 @@ public class MainApplication extends Application implements ReactApplication {
       DefaultNewArchitectureEntryPoint.load();
     }
     ReactNativeFlipper.initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+    OkHttpClientProvider.setOkHttpClientFactory(new SSLPinningFactory());
   }
 }

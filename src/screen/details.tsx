@@ -81,6 +81,7 @@ export const Details = ({route, navigation}: Props) => {
             <View style={styles.containerType}>
               {singlePokemon.types.map((item, index) => (
                 <View
+                  key={index}
                   style={{
                     ...styles.wrapperTypes,
                     backgroundColor:
@@ -90,7 +91,6 @@ export const Details = ({route, navigation}: Props) => {
                     marginLeft: index === 0 ? 0 : 25,
                   }}>
                   <Text
-                    key={index}
                     style={{
                       fontSize: windowWidth * 0.06,
                       fontWeight: '500',
