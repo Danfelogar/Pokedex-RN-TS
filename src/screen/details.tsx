@@ -9,23 +9,55 @@ import {
   Image,
 } from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {useSelector} from 'react-redux';
 
 import {RootStackMainParams} from '../navigation/navigationMain';
 import {LoadingScreen} from '../components/loadingScreen';
-import {RootState} from '../redux/store';
+import {RootState, useAppDispatch} from '../redux/store';
 import {getOficialImg, windowHeight, windowWidth} from '../util/magicalString';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {colorByType} from '../util/typeColor';
+import {
+  setAddFavoritesPokeList,
+  setDeleteFavoritesPokeList,
+} from '../redux/slices/pokemons';
 
 interface Props extends StackScreenProps<RootStackMainParams, 'Details'> {}
 
 export const Details = ({route, navigation}: Props) => {
+  const dispatch = useAppDispatch();
+  const isDarkMode = useColorScheme() === 'dark';
   const {isLoading, singlePokemon} = useSelector(
     (state: RootState) => state.singlePokeReducer,
   );
-  const isDarkMode = useColorScheme() === 'dark';
+
+  const {favoritesPokeList} = useSelector(
+    (state: RootState) => state.pokeReducer,
+  );
+
+  const isFavoritePoke = favoritesPokeList?.find(
+    poke => poke.id === singlePokemon?.id?.toString(),
+  );
+
+  const changeFavoritePoke = () => {
+    if (favoritesPokeList.length < 6) {
+      if (isFavoritePoke) {
+        return dispatch(setDeleteFavoritesPokeList(singlePokemon.id));
+      } else {
+        return dispatch(
+          setAddFavoritesPokeList({
+            id: singlePokemon.id.toString(),
+            name: singlePokemon.name,
+            url: singlePokemon.weight.toString(),
+          }),
+        );
+      }
+    }
+  };
+
   return (
     <View
       style={{
@@ -70,7 +102,11 @@ export const Details = ({route, navigation}: Props) => {
               <TouchableOpacity
                 activeOpacity={0.8}
                 onPress={() => navigation.goBack()}>
-                <Text style={styles.textTitle}>{'<'}</Text>
+                <MaterialIcons
+                  name="arrow-back-ios"
+                  size={23}
+                  color={isDarkMode ? Colors.darker : Colors.lighter}
+                />
               </TouchableOpacity>
               <Text style={styles.textTitle}>{singlePokemon.name}</Text>
             </View>
@@ -99,6 +135,14 @@ export const Details = ({route, navigation}: Props) => {
                   </Text>
                 </View>
               ))}
+            </View>
+            <View style={styles.containerType}>
+              <FontAwesome
+                onPress={changeFavoritePoke}
+                name={isFavoritePoke ? 'heart' : 'heart-o'}
+                size={45}
+                color={'#f66'}
+              />
             </View>
             <View
               style={{

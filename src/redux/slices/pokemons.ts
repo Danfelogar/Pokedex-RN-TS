@@ -6,6 +6,7 @@ import {store} from '../store';
 interface IStatePoke {
   pokeList: ISinglePokemon[];
   isShowPokemonImg: boolean;
+  favoritesPokeList: ISinglePokemon[];
   page: number;
   limit: number;
   totalPokemon: number;
@@ -14,6 +15,7 @@ interface IStatePoke {
 const initial_state: IStatePoke = {
   pokeList: [],
   isShowPokemonImg: false,
+  favoritesPokeList: [],
   page: 0,
   limit: 10,
   totalPokemon: 0,
@@ -41,11 +43,31 @@ const pokeReducer = createSlice({
       //state.totalPokemon = 20;
       state.totalPokemon = action.payload;
     },
+    setAddFavoritesPokeList: (
+      state: IStatePoke,
+      action: PayloadAction<ISinglePokemon>,
+    ) => {
+      state.favoritesPokeList = [...state.favoritesPokeList, action.payload];
+    },
+    setDeleteFavoritesPokeList: (
+      state: IStatePoke,
+      action: PayloadAction<number>,
+    ) => {
+      state.favoritesPokeList = state.favoritesPokeList.filter(
+        poke => poke.id !== action.payload.toString(),
+      );
+    },
   },
 });
 
-export const {getPokemons, setShowPokemonImg, setPage, setCountPokes} =
-  pokeReducer.actions;
+export const {
+  getPokemons,
+  setShowPokemonImg,
+  setPage,
+  setCountPokes,
+  setAddFavoritesPokeList,
+  setDeleteFavoritesPokeList,
+} = pokeReducer.actions;
 
 export const getPokemonsAsync = createAsyncThunk(
   'pokeReducer/getPokemonsAsync',

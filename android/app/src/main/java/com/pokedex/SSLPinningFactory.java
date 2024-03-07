@@ -11,7 +11,7 @@ public class SSLPinningFactory implements OkHttpClientFactory {
    public OkHttpClient createNewNetworkModuleClient() {
 
       CertificatePinner certificatePinner = new CertificatePinner.Builder()
-        .add(hostname, "sha256/eVr/eyROosdTqxrORu3/RD5wbJcsquAF6L2Qj4Q2cRw=")
+        .add(hostname, "sha256/WO4wiw1xvdu+PCl4a99lsitSzDA79pgmkPpy2Ow29uc=")
         .build();
 
       OkHttpClient.Builder clientBuilder = OkHttpClientProvider.createClientBuilder();

@@ -6,7 +6,7 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {NavigationContainer} from '@react-navigation/native';
 import 'react-native-gesture-handler';
 
-import {NavigationMain} from './src/navigation/navigationMain';
+import {NavigationTab} from './src/navigation/navigationTab';
 import {persistor, store} from './src/redux/store';
 import {
   notificationCloudMessageListener,
@@ -32,7 +32,7 @@ function App(): JSX.Element {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
-          <NavigationMain />
+          <NavigationTab />
         </NavigationContainer>
       </PersistGate>
     </Provider>

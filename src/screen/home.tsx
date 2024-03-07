@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {useSelector} from 'react-redux';
+
 import {RootState, useAppDispatch} from '../redux/store';
 import {getPokemonsAsync} from '../redux/slices/pokemons';
 import {PokemonCard} from '../components/pokemonCard';
@@ -18,6 +19,7 @@ export const Home = () => {
   const {totalPokemon, pokeList, page} = useSelector(
     (state: RootState) => state.pokeReducer,
   );
+
   useEffect(() => {
     if (page === 0) {
       dispatch(getPokemonsAsync(1));
@@ -29,6 +31,7 @@ export const Home = () => {
       dispatch(getPokemonsAsync(page + 1));
     }
   };
+
   // console.log({totalPokemon}, pokeList.length);
   return (
     <StandarWrapper>
