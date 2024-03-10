@@ -16,3 +16,10 @@ jest.mock('@react-navigation/native', () => {
     },
   };
 });
+
+jest.mock(
+  'react-native-vector-icons/MaterialCommunityIcons',
+  () => 'MockedMaterialCommunityIcons',
+);
+
+jest.mock('react-native-vector-icons/FontAwesome', () => 'MockedFontAwesome');

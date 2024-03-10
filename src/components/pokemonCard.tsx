@@ -37,7 +37,9 @@ export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
   const {favoritesPokeList} = useSelector(
     (state: RootState) => state.pokeReducer,
   );
+
   console.log({favoritesPokeList});
+
   const navigateDetails = (pokeID: string) => {
     dispatch(resetState());
     dispatch(setPokeID(pokeID));
@@ -50,18 +52,16 @@ export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
   );
 
   const changeFavoritePoke = () => {
-    if (favoritesPokeList.length < 6) {
-      if (isFavoritePoke) {
-        return dispatch(setDeleteFavoritesPokeList(Number(item.id)));
-      } else {
-        return dispatch(
-          setAddFavoritesPokeList({
-            id: item.id.toString(),
-            name: item.name,
-            url: item.url,
-          }),
-        );
-      }
+    if (isFavoritePoke) {
+      return dispatch(setDeleteFavoritesPokeList(Number(item.id)));
+    } else if (favoritesPokeList.length < 6) {
+      return dispatch(
+        setAddFavoritesPokeList({
+          id: item.id.toString(),
+          name: item.name,
+          url: item.url,
+        }),
+      );
     }
   };
 

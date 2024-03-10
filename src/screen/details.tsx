@@ -43,18 +43,16 @@ export const Details = ({route, navigation}: Props) => {
   );
 
   const changeFavoritePoke = () => {
-    if (favoritesPokeList.length < 6) {
-      if (isFavoritePoke) {
-        return dispatch(setDeleteFavoritesPokeList(singlePokemon.id));
-      } else {
-        return dispatch(
-          setAddFavoritesPokeList({
-            id: singlePokemon.id.toString(),
-            name: singlePokemon.name,
-            url: singlePokemon.weight.toString(),
-          }),
-        );
-      }
+    if (isFavoritePoke) {
+      return dispatch(setDeleteFavoritesPokeList(singlePokemon.id));
+    } else if (favoritesPokeList.length < 6) {
+      return dispatch(
+        setAddFavoritesPokeList({
+          id: singlePokemon.id.toString(),
+          name: singlePokemon.name,
+          url: singlePokemon.weight.toString(),
+        }),
+      );
     }
   };
 

@@ -1,16 +1,32 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {NavigationMain} from './navigationMain';
 import {FavoriteListPoke} from '../screen/favoriteListPoke';
-import {Platform, useColorScheme} from 'react-native';
+import {NativeModules, Platform, useColorScheme} from 'react-native';
+import {RootState} from '../redux/store';
+import {useSelector} from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
+const {RNSharedWidget} = NativeModules;
+
 export const NavigationTab = () => {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const {favoritesPokeList} = useSelector(
+    (state: RootState) => state.pokeReducer,
+  );
+
+  useEffect(() => {
+    RNSharedWidget.setData(
+      'pokeFavoriteList',
+      JSON.stringify(favoritesPokeList),
+      (status: number | null) => console.log({status}),
+    );
+  }, [favoritesPokeList]);
 
   return (
     <Tab.Navigator

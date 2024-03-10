@@ -39,6 +39,7 @@
 		728E6AA02B9974C600DD8E9F /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728E6A9F2B9974C600DD8E9F /* AppIntent.swift */; };
 		728E6AA22B9974C900DD8E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728E6AA12B9974C900DD8E9F /* Assets.xcassets */; };
 		728E6AA62B9974C900DD8E9F /* PokeFavoritesExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 728E6A952B9974C600DD8E9F /* PokeFavoritesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		72CDAD022B9A7AEA00535C35 /* WidgetKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CDAD012B9A7AEA00535C35 /* WidgetKitHelper.swift */; };
 		72EEBEFF2B99253600983840 /* RNSharedWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EEBEFE2B99253600983840 /* RNSharedWidget.m */; };
 		72EEBF012B99254E00983840 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EEBF002B99254E00983840 /* Counter.m */; };
 		72EEBF042B9925BE00983840 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EEBF032B9925BE00983840 /* Counter.swift */; };
@@ -120,6 +121,9 @@
 		728E6A9F2B9974C600DD8E9F /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		728E6AA12B9974C900DD8E9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728E6AA32B9974C900DD8E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72CDACFF2B9A5B9C00535C35 /* PokeDex.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = PokeDex.entitlements; path = PokeDex/PokeDex.entitlements; sourceTree = "<group>"; };
+		72CDAD002B9A5BA900535C35 /* PokeFavoritesExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokeFavoritesExtension.entitlements; sourceTree = "<group>"; };
+		72CDAD012B9A7AEA00535C35 /* WidgetKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetKitHelper.swift; sourceTree = "<group>"; };
 		72EEBEFB2B99250800983840 /* RNSharedWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSharedWidget.h; sourceTree = "<group>"; };
 		72EEBEFE2B99253600983840 /* RNSharedWidget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSharedWidget.m; sourceTree = "<group>"; };
 		72EEBF002B99254E00983840 /* Counter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		13B07FAE1A68108700A75B9A /* PokeDex */ = {
 			isa = PBXGroup;
 			children = (
+				72CDACFF2B9A5B9C00535C35 /* PokeDex.entitlements */,
 				728E6A6A2B995F1500DD8E9F /* Font */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -188,6 +193,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				72EEBF032B9925BE00983840 /* Counter.swift */,
 				72EEBF002B99254E00983840 /* Counter.m */,
+				72CDAD012B9A7AEA00535C35 /* WidgetKitHelper.swift */,
 				72EEBEFB2B99250800983840 /* RNSharedWidget.h */,
 				72EEBEFE2B99253600983840 /* RNSharedWidget.m */,
 				72EEBF022B9925BE00983840 /* PokeDex-Bridging-Header.h */,
@@ -255,6 +261,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				72CDAD002B9A5BA900535C35 /* PokeFavoritesExtension.entitlements */,
 				7246B7842B253EF200192CDF /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* PokeDex */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -622,6 +629,7 @@
 			files = (
 				72EEBF042B9925BE00983840 /* Counter.swift in Sources */,
 				72EEBF012B99254E00983840 /* Counter.m in Sources */,
+				72CDAD022B9A7AEA00535C35 /* WidgetKitHelper.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				72EEBEFF2B99253600983840 /* RNSharedWidget.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
@@ -716,6 +724,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PokeDex/PokeDex.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B66B7LDLW4;
 				ENABLE_BITCODE = NO;
@@ -746,6 +755,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = PokeDex/PokeDex.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B66B7LDLW4;
 				INFOPLIST_FILE = PokeDex/Info.plist;
@@ -779,6 +789,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = PokeFavoritesExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -826,6 +837,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = PokeFavoritesExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
