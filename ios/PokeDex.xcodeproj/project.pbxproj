@@ -242,9 +242,9 @@
 		728E6A9A2B9974C600DD8E9F /* PokeFavorites */ = {
 			isa = PBXGroup;
 			children = (
-				728E6A9B2B9974C600DD8E9F /* PokeFavoritesBundle.swift */,
 				728E6A9D2B9974C600DD8E9F /* PokeFavorites.swift */,
 				728E6A9F2B9974C600DD8E9F /* AppIntent.swift */,
+				728E6A9B2B9974C600DD8E9F /* PokeFavoritesBundle.swift */,
 				728E6AA12B9974C900DD8E9F /* Assets.xcassets */,
 				728E6AA32B9974C900DD8E9F /* Info.plist */,
 			);
