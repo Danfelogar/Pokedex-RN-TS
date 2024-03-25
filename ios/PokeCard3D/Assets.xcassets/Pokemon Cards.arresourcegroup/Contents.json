@@ -1,0 +1,29 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "aggron.arreferenceimage"
+    },
+    {
+      "filename" : "butterfree.arreferenceimage"
+    },
+    {
+      "filename" : "darkrai.arreferenceimage"
+    },
+    {
+      "filename" : "glaceon.arreferenceimage"
+    },
+    {
+      "filename" : "pikachu.arreferenceimage"
+    },
+    {
+      "filename" : "raichu.arreferenceimage"
+    },
+    {
+      "filename" : "shaymin.arreferenceimage"
+    }
+  ]
+}

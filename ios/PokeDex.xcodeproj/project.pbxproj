@@ -13,6 +13,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7246B7852B253EF200192CDF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7246B7842B253EF200192CDF /* GoogleService-Info.plist */; };
+		726949822BB0C6B3001878D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726949812BB0C6B3001878D4 /* AppDelegate.swift */; };
+		726949842BB0C6B3001878D4 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 726949832BB0C6B3001878D4 /* art.scnassets */; };
+		726949862BB0C6B3001878D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726949852BB0C6B3001878D4 /* ViewController.swift */; };
+		726949892BB0C6B3001878D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 726949882BB0C6B3001878D4 /* Base */; };
+		7269498B2BB0C6B4001878D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7269498A2BB0C6B4001878D4 /* Assets.xcassets */; };
 		728E6A7E2B995F4200DD8E9F /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 728E6A6B2B995F4100DD8E9F /* FontAwesome5_Brands.ttf */; };
 		728E6A7F2B995F4200DD8E9F /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 728E6A6C2B995F4100DD8E9F /* FontAwesome6_Brands.ttf */; };
 		728E6A802B995F4200DD8E9F /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 728E6A6D2B995F4100DD8E9F /* Octicons.ttf */; };
@@ -94,6 +99,12 @@
 		5B7EB9410499542E8C5724F5 /* Pods-PokeDex-PokeDexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeDex-PokeDexTests.debug.xcconfig"; path = "Target Support Files/Pods-PokeDex-PokeDexTests/Pods-PokeDex-PokeDexTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-PokeDex.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeDex.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7246B7842B253EF200192CDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7269497F2BB0C6B3001878D4 /* PokeCard3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeCard3D.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		726949812BB0C6B3001878D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		726949832BB0C6B3001878D4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		726949852BB0C6B3001878D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		726949882BB0C6B3001878D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7269498A2BB0C6B4001878D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		728E6A6B2B995F4100DD8E9F /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		728E6A6C2B995F4100DD8E9F /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome6_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf"; sourceTree = "<group>"; };
 		728E6A6D2B995F4100DD8E9F /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -148,6 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-PokeDex.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7269497C2BB0C6B3001878D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +231,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		726949802BB0C6B3001878D4 /* PokeCard3D */ = {
+			isa = PBXGroup;
+			children = (
+				726949812BB0C6B3001878D4 /* AppDelegate.swift */,
+				726949832BB0C6B3001878D4 /* art.scnassets */,
+				726949852BB0C6B3001878D4 /* ViewController.swift */,
+				726949872BB0C6B3001878D4 /* Main.storyboard */,
+				7269498A2BB0C6B4001878D4 /* Assets.xcassets */,
+			);
+			path = PokeCard3D;
+			sourceTree = "<group>";
+		};
 		728E6A6A2B995F1500DD8E9F /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +297,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PokeDexTests */,
 				728E6A9A2B9974C600DD8E9F /* PokeFavorites */,
+				726949802BB0C6B3001878D4 /* PokeCard3D */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -282,6 +313,7 @@
 				13B07F961A680F5B00A75B9A /* PokeDex.app */,
 				00E356EE1AD99517003FC87E /* PokeDexTests.xctest */,
 				728E6A952B9974C600DD8E9F /* PokeFavoritesExtension.appex */,
+				7269497F2BB0C6B3001878D4 /* PokeCard3D.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +378,23 @@
 			productReference = 13B07F961A680F5B00A75B9A /* PokeDex.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7269497E2BB0C6B3001878D4 /* PokeCard3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7269498E2BB0C6B4001878D4 /* Build configuration list for PBXNativeTarget "PokeCard3D" */;
+			buildPhases = (
+				7269497B2BB0C6B3001878D4 /* Sources */,
+				7269497C2BB0C6B3001878D4 /* Frameworks */,
+				7269497D2BB0C6B3001878D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokeCard3D;
+			productName = PokeCard3D;
+			productReference = 7269497F2BB0C6B3001878D4 /* PokeCard3D.app */;
+			productType = "com.apple.product-type.application";
+		};
 		728E6A942B9974C600DD8E9F /* PokeFavoritesExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 728E6AA72B9974C900DD8E9F /* Build configuration list for PBXNativeTarget "PokeFavoritesExtension" */;
@@ -369,8 +418,9 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -378,6 +428,9 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1530;
+					};
+					7269497E2BB0C6B3001878D4 = {
+						CreatedOnToolsVersion = 15.3;
 					};
 					728E6A942B9974C600DD8E9F = {
 						CreatedOnToolsVersion = 15.3;
@@ -400,6 +453,7 @@
 				13B07F861A680F5B00A75B9A /* PokeDex */,
 				00E356ED1AD99517003FC87E /* PokeDexTests */,
 				728E6A942B9974C600DD8E9F /* PokeFavoritesExtension */,
+				7269497E2BB0C6B3001878D4 /* PokeCard3D */,
 			);
 		};
 /* End PBXProject section */
@@ -438,6 +492,16 @@
 				728E6A822B995F4200DD8E9F /* Entypo.ttf in Resources */,
 				728E6A802B995F4200DD8E9F /* Octicons.ttf in Resources */,
 				7246B7852B253EF200192CDF /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7269497D2BB0C6B3001878D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726949842BB0C6B3001878D4 /* art.scnassets in Resources */,
+				7269498B2BB0C6B4001878D4 /* Assets.xcassets in Resources */,
+				726949892BB0C6B3001878D4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +700,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7269497B2BB0C6B3001878D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726949862BB0C6B3001878D4 /* ViewController.swift in Sources */,
+				726949822BB0C6B3001878D4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		728E6A912B9974C600DD8E9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,6 +733,17 @@
 			targetProxy = 728E6AA42B9974C900DD8E9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		726949872BB0C6B3001878D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				726949882BB0C6B3001878D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
@@ -774,6 +858,99 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "PokeDex-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		7269498C2BB0C6B4001878D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B66B7LDLW4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danfelogarDev.www.PokeCard3D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7269498D2BB0C6B4001878D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B66B7LDLW4;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danfelogarDev.www.PokeCard3D;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1018,6 +1195,7 @@
 				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1039,6 +1217,15 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7269498E2BB0C6B4001878D4 /* Build configuration list for PBXNativeTarget "PokeCard3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7269498C2BB0C6B4001878D4 /* Debug */,
+				7269498D2BB0C6B4001878D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
