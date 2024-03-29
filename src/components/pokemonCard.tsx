@@ -38,8 +38,6 @@ export const PokemonCard = ({item}: {item: ISinglePokemon}) => {
     (state: RootState) => state.pokeReducer,
   );
 
-  console.log({favoritesPokeList});
-
   const navigateDetails = (pokeID: string) => {
     dispatch(resetState());
     dispatch(setPokeID(pokeID));

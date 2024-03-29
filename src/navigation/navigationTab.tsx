@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {NavigationMain} from './navigationMain';
@@ -8,6 +9,7 @@ import {FavoriteListPoke} from '../screen/favoriteListPoke';
 import {NativeModules, Platform, useColorScheme} from 'react-native';
 import {RootState} from '../redux/store';
 import {useSelector} from 'react-redux';
+import Poke3DModels from '../screen/poke3DModels';
 
 const Tab = createBottomTabNavigator();
 
@@ -84,6 +86,23 @@ export const NavigationTab = () => {
                   size={23}
                   color={'#6390F0'}
                 />
+              )}
+            </>
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Poke3DModels"
+        component={Poke3DModels}
+        options={{
+          tabBarLabel: '3D Models',
+          tabBarIcon: ({color, focused}) => (
+            <>
+              {focused ? (
+                <AntDesign name="aliwangwang" size={23} color={color} />
+              ) : (
+                <AntDesign name="aliwangwang-o1" size={23} color={'#6390F0'} />
               )}
             </>
           ),

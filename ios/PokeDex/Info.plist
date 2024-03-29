@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Your app requires access to the camera to take pictures.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -56,28 +58,30 @@
 				<true/>
 			</dict>
 		</dict>
+		<key>NSCameraUsageDescription</key>
+		<string>Your app requires access to the camera to take pictures.</string>
 	</dict>
 	<key>TSKConfiguration</key>
 	<dict>
-	<key>TSKPinnedDomains</key>
-	<dict>
-		<key>pokeapi.co</key>
+		<key>TSKPinnedDomains</key>
 		<dict>
-		<key>TSKEnforcePinning</key>
-		<true/>
-		<key>TSKIncludeSubdomains</key>
-		<true/>
-		<key>TSKPublicKeyAlgorithms</key>
-		<array>
-			<string>TSKAlgorithmRsa2048</string>
-		</array>
-		<key>TSKPublicKeyHashes</key>
-		<array>
-			<string>eVr/eyROosdTqxrORu3/RD5wbJcsquAF6L2Qj4Q2cRw=</string>
-			<string>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=</string>
-		</array>
+			<key>pokeapi.co</key>
+			<dict>
+				<key>TSKEnforcePinning</key>
+				<true/>
+				<key>TSKIncludeSubdomains</key>
+				<true/>
+				<key>TSKPublicKeyAlgorithms</key>
+				<array>
+					<string>TSKAlgorithmRsa2048</string>
+				</array>
+				<key>TSKPublicKeyHashes</key>
+				<array>
+					<string>eVr/eyROosdTqxrORu3/RD5wbJcsquAF6L2Qj4Q2cRw=</string>
+					<string>BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=</string>
+				</array>
+			</dict>
 		</dict>
-	</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>

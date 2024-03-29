@@ -89,6 +89,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         "darkrai": "art.scnassets/Darkrai.scn",
         "butterfree": "art.scnassets/Butterfree.scn",
         "shaymin": "art.scnassets/Shaymin.scn",
+        "dracozolt": "art.scnassets/Dracozolt.scn"
       ]
       
       if let sceneName = sceneMapping[imgAnchor.referenceImage.name!] {
